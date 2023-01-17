@@ -59,7 +59,7 @@ function update() {
         context.fillRect(snakeBody[i][0], snakeBody[i][1], blocksize, blocksize);
     }
 
-    if(snakeX < 0 || snakeX > cols * blocksize || snakeY < 0 || snakeY > rows * blocksize) {
+    if(snakeX < 0 || snakeX > (cols - 1) * blocksize || snakeY < 0 || snakeY > (rows - 1) * blocksize) {
         gameOver = true;
         if(n == 0){
             alert("Game Over \nYour Score is: " + points);
